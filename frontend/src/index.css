@@ -1,0 +1,904 @@
+/* src/index.css */
+
+:root {
+  --brown: #4E342E;
+  --beige: #F5DEB3;
+  --ivory: #FFF8E7;
+  --terracotta: #D2691E;
+  --text-dark: #2C2C2C;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--ivory);
+  color: var(--text-dark);
+}
+
+/* Styles spécifiques pour le Header */
+.header-custom {
+  background-color: var(--brown);
+  padding: 1rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 60px;
+  width: auto;
+}
+
+nav .nav-link-custom {
+  color: white !important;
+  margin-left: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav .nav-link-custom:hover {
+  color: var(--terracotta) !important;
+}
+
+/* Styles pour la section Hero */
+.hero-section {
+  background-color: var(--beige);
+  padding: 6rem 4rem;
+  overflow: hidden;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 550px;
+  padding-right: 2rem;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: var(--terracotta);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background-color: #e07b2f;
+  transform: translateY(-2px);
+}
+
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 450px;
+  margin-left: 2rem;
+}
+
+.hero-image {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Réactivité pour les petits écrans (Hero) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 1.5rem;
+  }
+  .hero-text {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-image-container {
+    margin-left: 0;
+    max-width: 300px;
+  }
+}
+
+/* Styles pour la section "Nos Modèles de Tresses" (ModelePopulaire) */
+.modele-populaire-section {
+  background-color: var(--ivory);
+  padding: 5rem 0;
+}
+
+.modele-populaire-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 3.5rem;
+}
+
+.modele-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.modele-image {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.modele-image:hover {
+  transform: scale(1.03);
+}
+
+.modele-name {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-top: 1.2rem;
+}
+
+/* Réactivité pour la section ModelePopulaire */
+@media (max-width: 768px) {
+  .modele-populaire-title {
+    font-size: 2rem;
+  }
+  .modele-image {
+    max-width: 250px;
+    height: 170px;
+  }
+  .modele-name {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .modele-populaire-title {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+  .modele-image {
+    max-width: 90%;
+    height: 150px;
+  }
+  .modele-name {
+    font-size: 1.1rem;
+  }
+}
+
+/* Styles pour le Footer */
+.footer-custom {
+  background-color: var(--brown);
+  color: white;
+  padding: 4rem 0;
+}
+
+/* Style pour les titres avec soulignement orange */
+.footer-heading-underline {
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.footer-heading-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  height: 3px;
+  background-color: var(--terracotta);
+  border-radius: 2px;
+}
+
+
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.footer-tagline {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0.2rem 0;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: var(--terracotta) !important;
+}
+
+.social-links .social-icon {
+  font-size: 1.1rem;
+  color: white;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-links .social-icon:hover {
+  color: var(--terracotta);
+  border-color: var(--terracotta);
+  background-color: rgba(210, 105, 30, 0.1);
+}
+/* Styles spécifiques aux icônes Lucide pour s'assurer qu'elles héritent la couleur */
+.social-icon svg {
+    color: inherit;
+}
+
+
+.border-white-50 {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Styles pour la section Témoignages */
+.temoignages-section {
+  background-color: var(--beige);
+  padding: 5rem 0;
+}
+
+.temoignages-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 3.5rem;
+}
+
+.temoignage-card {
+  max-width: 700px;
+  background-color: var(--ivory);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.temoignage-card:hover {
+  transform: translateY(-5px);
+}
+
+.temoignage-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--brown);
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.temoignage-avis {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.temoignage-note {
+  font-size: 1.5rem;
+  color: #FFD700;
+}
+
+/* Styles pour les contrôles du carrousel */
+.temoignages-carousel-control {
+  width: 5%;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.temoignages-carousel-control:hover {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--terracotta);
+  border-radius: 50%;
+  padding: 1.5rem;
+}
+
+/* Réactivité pour la section Témoignages */
+@media (max-width: 768px) {
+  .temoignages-title {
+    font-size: 2rem;
+  }
+  .temoignage-card {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+  .temoignage-name {
+    font-size: 1.4rem;
+  }
+  .temoignage-avis {
+    font-size: 1.1rem;
+  }
+  .temoignage-note {
+    font-size: 1.3rem;
+  }
+  .temoignages-carousel-control {
+    width: 8%;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    padding: 1rem;
+  }
+}
+
+/* Styles pour la page À propos (Apropos.jsx) */
+.apropos-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--ivory);
+}
+
+.apropos-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 3.5rem;
+}
+
+.apropos-image {
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.apropos-text-container {
+  padding-left: 2rem;
+}
+
+.apropos-paragraph {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+/* Réactivité pour la section À propos */
+@media (max-width: 992px) {
+  .apropos-text-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .apropos-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .apropos-image {
+    margin-bottom: 2rem;
+  }
+  .apropos-text-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .apropos-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .apropos-paragraph {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* Styles pour la page Contact (Contact.jsx) */
+.contact-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--ivory);
+}
+
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 3.5rem;
+}
+
+/* Correction pour les cartes de contact pour qu'elles aient la même hauteur */
+/* La classe d-flex et align-items-stretch est appliquée à la row parente dans Contact.jsx */
+.contact-info-container {
+  background-color: var(--beige);
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  /* height: 100%; REMOVED - d-flex align-items-stretch sur la row s'en charge */
+  display: flex; /* Maintenu pour la disposition interne */
+  flex-direction: column;
+  justify-content: space-between; /* Aide à répartir le contenu verticalement si l'une est plus courte */
+}
+
+.contact-form {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex; /* Maintenu pour la disposition interne */
+  flex-direction: column;
+}
+
+/* Ajustements pour les titres et icônes dans les cartes contact */
+.contact-info-heading, .contact-form-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--brown);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative; /* Pour le soulignement */
+  padding-bottom: 10px; /* Espace pour le soulignement */
+}
+
+.contact-info-heading::after, .contact-form-heading::after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Centre le soulignement */
+  transform: translateX(-50%); /* Ajuste le centrage */
+  bottom: 0;
+  width: 80px; /* Longueur du soulignement */
+  height: 3px;
+  background-color: var(--terracotta);
+  border-radius: 2px;
+}
+
+
+.contact-info-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-details {
+  padding-left: 0;
+  flex-grow: 1; /* Permet à la liste de prendre l'espace restant */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre les éléments de la liste si l'espace le permet */
+}
+
+.contact-details li {
+  margin-bottom: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
+.contact-icon {
+  color: var(--terracotta);
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.form-label {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.contact-input,
+.contact-textarea {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 0.25rem rgba(210, 105, 30, 0.25);
+  outline: none;
+}
+
+.contact-textarea {
+  resize: vertical;
+  flex-grow: 1; /* Permet à la textarea de s'étirer */
+}
+
+.contact-submit-btn {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.submission-message {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Réactivité pour la page Contact */
+@media (max-width: 768px) {
+  .contact-info-container {
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .contact-form {
+    padding: 1.5rem;
+  }
+  .contact-title {
+    font-size: 2.2rem;
+  }
+  .contact-info-heading, .contact-form-heading {
+    font-size: 1.8rem;
+  }
+  .contact-submit-btn {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  .contact-details li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+  .contact-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .contact-info-container, .contact-form {
+    padding: 1rem;
+  }
+  .contact-info-heading, .contact-form-heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* Styles pour la page Produits (Produits.jsx) */
+.produits-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--ivory);
+}
+
+.produits-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 3.5rem;
+}
+
+.product-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-color: white;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.product-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--brown);
+  margin-bottom: 0.5rem;
+  flex-grow: 1;
+}
+
+.product-price {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--terracotta);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-contact-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.order-btn {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  width: auto;
+  align-self: center;
+  text-decoration: none;
+}
+
+
+/* Réactivité pour la page Produits */
+@media (max-width: 992px) {
+  .produits-title {
+    font-size: 2.4rem;
+  }
+  .product-image {
+    height: 220px;
+  }
+  .product-name {
+    font-size: 1.3rem;
+  }
+  .product-price {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .produits-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .product-image {
+    height: 200px;
+  }
+  .product-name {
+    font-size: 1.2rem;
+  }
+  .product-price {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .produits-section {
+    padding: 3rem 1rem;
+  }
+  .product-image {
+    height: 180px;
+  }
+  .product-card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+  }
+}
+
+
+/* Styles pour la Modale de Contact */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Quand la modale est ouverte */
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content-custom {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 550px;
+  position: relative;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.show .modal-content-custom {
+  transform: translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-dark);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close-btn svg {
+  color: var(--brown);
+}
+
+.modal-close-btn:hover svg {
+  color: var(--terracotta);
+}
+
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--brown);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Réutilisation des styles de formulaire de la page contact */
+/* .contact-input, .contact-textarea, .form-label, .contact-submit-btn, .submission-message */
+/* sont déjà définis plus haut et seront appliqués ici */
+
+
+/* Réactivité pour la Modale */
+@media (max-width: 768px) {
+  .modal-content-custom {
+    padding: 1.5rem;
+  }
+  .modal-title {
+    font-size: 1.6rem;
+  }
+  .modal-close-btn {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* Nouveaux styles pour la page Mentions Légales */
+.legal-notice-section {
+  background-color: var(--ivory);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.legal-notice-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 3.5rem;
+}
+
+.legal-content {
+  max-width: 800px; /* Limite la largeur du contenu pour une meilleure lisibilité */
+  margin: 0 auto; /* Centre le contenu */
+  background-color: white; /* Fond blanc pour le contenu légal */
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.legal-subsection-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--brown); /* Couleur marron pour les sous-titres */
+  margin-top: 2.5rem; /* Espace au-dessus des sous-titres */
+  margin-bottom: 1rem;
+}
+
+.legal-paragraph {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin-bottom: 1.2rem;
+}
+
+/* Réactivité pour la page Mentions Légales */
+@media (max-width: 768px) {
+  .legal-notice-title {
+    font-size: 2.2rem;
+  }
+  .legal-content {
+    padding: 1.5rem;
+  }
+  .legal-subsection-title {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .legal-paragraph {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .legal-notice-title {
+    font-size: 2rem;
+  }
+  .legal-content {
+    padding: 1rem;
+  }
+  .legal-subsection-title {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+  }
+}
