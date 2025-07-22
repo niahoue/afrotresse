@@ -8,7 +8,7 @@ import ModelePopulaires from "../components/ModelePopulaires";
 
 export default function Home() {
   return (
-    <div className="home-page">
+    <div className="home-page fade-in">
       <Header />
       <main>
         <Hero />

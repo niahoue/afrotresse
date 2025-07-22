@@ -60,12 +60,12 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <div className="fade-in">
       <Header />
       <div className="container py-5 contact-section">
-        <h2 className="mb-5 text-center contact-title">Contactez-nous</h2>
+        <h2 className="mb-5 text-center contact-title slide-in-up">Contactez-nous</h2>
         {/* Ajout de d-flex et align-items-stretch ici pour que les colonnes aient la même hauteur */}
-        <div className="row justify-content-center d-flex align-items-stretch">
+        <div className="row justify-content-center d-flex align-items-stretch slide-in-up">
           {/* Section Informations de Contact */}
           {/* Utilisation de col-md-5 et col-lg-4 pour un meilleur alignement visuel et répartition */}
           <div className="col-md-5 col-lg-4 mb-4 mb-md-0 contact-info-container d-flex flex-column justify-content-center">
@@ -174,7 +174,7 @@ const Contact = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

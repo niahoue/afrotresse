@@ -6,12 +6,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css"; 
 const MentionsLegales = () => {
   return (
-    <>
+    <div className="fade-in">
       <Header />
       <div className="container py-5 legal-notice-section">
-        <h2 className="mb-5 text-center legal-notice-title">Mentions Légales</h2>
+        <h2 className="mb-5 text-center legal-notice-title slide-in-up">Mentions Légales</h2>
 
-        <div className="legal-content">
+        <div className="legal-content slide-in-up">
           <p className="legal-paragraph">
             Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site Afro-Tresse l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.
           </p>
@@ -62,7 +62,7 @@ const MentionsLegales = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,8 @@
 // src/components/ModelePopulaire.jsx
 
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css"; // Assurez-vous que votre fichier CSS est importé
 
@@ -56,10 +58,11 @@ const ModelePopulaire = () => {
           {modelesPopulaires.map((modele) => (
             <div key={modele.id} className="col">
               <div className="modele-item"> {/* Conteneur pour chaque modèle */}
-                <img
+                <LazyLoadImage
                   src={modele.image}
                   className="img-fluid rounded modele-image" // Classes pour l'image
                   alt={modele.nom}
+                  effect="blur"
                   onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/300x200/F5DEB3/2C2C2C?text=Image"; }}
                 />
                 <h5 className="mt-3 modele-name">{modele.nom}</h5> {/* Nom du modèle */}
