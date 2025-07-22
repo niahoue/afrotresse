@@ -6,6 +6,7 @@
   --ivory: #FFF8E7;
   --terracotta: #D2691E;
   --text-dark: #2C2C2C;
+  --animation-duration: 0.5s;
 }
 
 body {
@@ -165,7 +166,37 @@ nav .nav-link-custom:hover {
 }
 
 .modele-image:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn var(--animation-duration) ease-in-out;
+}
+
+.slide-in-up {
+  animation: slideInUp var(--animation-duration) ease-in-out;
 }
 
 .modele-name {

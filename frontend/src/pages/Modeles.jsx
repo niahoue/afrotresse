@@ -1,5 +1,7 @@
 // src/pages/Modeles.jsx
 import React, { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../index.css";
@@ -51,25 +53,26 @@ const Modeles = () => {
   const [tresses, setTresses] = useState(donneesTresses);
 
   return (
-    <>
+    <div className="fade-in">
       <Header />
-      <div className="container py-5">
+      <div className="container py-5 slide-in-up">
         <h2 className="mb-4 text-center">Nos Modèles de Tresses</h2>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
           {tresses.map((modele) => (
             <div className="col text-center" key={modele.id}>
-              <img
+              <LazyLoadImage
                 src={modele.image}
                 alt={modele.nom}
-                className="img-fluid rounded mb-2"
+                className="img-fluid rounded mb-2 modele-image"
+                effect="blur"
               />
-              <h5>{modele.nom}</h5>
+              <h5 className="modele-name">{modele.nom}</h5>
             </div>
           ))}
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

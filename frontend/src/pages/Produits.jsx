@@ -85,12 +85,12 @@ const Produits = () => {
   };
 
   return (
-    <>
+    <div className="fade-in">
       <Header />
       <div className="container py-5 produits-section">
-        <h2 className="mb-5 text-center produits-title">Nos Produits Capillaires & Perruques</h2>
+        <h2 className="mb-5 text-center produits-title slide-in-up">Nos Produits Capillaires & Perruques</h2>
 
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center slide-in-up">
           {produitsData.map((produit) => (
             <div key={produit.id} className="col">
               <div className="card h-100 product-card shadow-sm">
@@ -123,7 +123,7 @@ const Produits = () => {
         onClose={closeModal}
         productName={selectedProductName}
       />
-    </>
+    </div>
   );
 };
 

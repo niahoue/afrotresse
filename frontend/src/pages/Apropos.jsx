@@ -7,18 +7,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const APropos = () => {
   return (
-    <>
-      {" "}
+    <div className="fade-in">
       <Header />
-      <div className="container py-5">
-        <h2 className="mb-4 text-center">À propos de Afro-Tresse</h2>
+      <div className="container py-5 apropos-section">
+        <h2 className="mb-4 text-center apropos-title slide-in-up">À propos de Afro-Tresse</h2>
 
-        <div className="row align-items-center">
+        <div className="row align-items-center slide-in-up">
           <div className="col-md-6">
             <img
               src="equipe.jpg"
               alt="Notre équipe"
-              className="img-fluid rounded shadow-sm mb-4 mb-md-0"
+              className="img-fluid rounded shadow-sm mb-4 mb-md-0 apropos-image"
             />
           </div>
           <div className="col-md-6">
@@ -49,8 +48,8 @@ const APropos = () => {
           </div>
         </div>
       </div>
-      <Footer />{" "}
-    </>
+      <Footer />
+    </div>
   );
 };
 
